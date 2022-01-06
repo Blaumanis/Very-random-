@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random colors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Counter</a></li>
+          <li><a href="random.html">Random Position</a></li>
+          <li><a href="color.html">Random Color</a></li>
+          <li><a href="calculator.html">Text Length</a></li>
+        </ul>
+      </nav>
+
+    <div class="random-color">
+        <h1>Welcome</h1>
+        <button class="btn" id="colorBtn">Click me</button>
+    </div>
+
+<script>
+    // random color
+function randomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+const colorBtn = document.getElementById('colorBtn');
+colorBtn.addEventListener('click', function (){
+    const h1 = document.querySelector('.random-color h1');
+    const newColor = randomColor()
+    document.body.style.background = newColor;
+    h1.innerText = newColor;
+})
+
+</script>
+</body>
+
+</html>

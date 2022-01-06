@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Position</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Counter</a></li>
+      <li><a href="random.html">Random Position</a></li>
+      <li><a href="color.html">Random Color</a></li>
+      <li><a href="calculator.html">Text Length</a></li>
+    </ul>
+  </nav>
+
+  <img src="/icon-rock.svg" id="image">
+
+  <script>
+    // random position
+function Init() {  
+    image = document.getElementById('image')
+    spaceW = screen.height - image.height;
+    spaceH = screen.width - image.width;
+    setInterval(MoveIt, 1000);
+  }
+function MoveIt() {
+    image.style.top = Math.round(Math.random() * spaceW) + "px";
+    image.style.left = Math.round(Math.random() * spaceH) + "px";
+}
+Init()
+  </script>
+</body>
+</html>

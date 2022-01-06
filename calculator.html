@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Length Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Counter</a></li>
+          <li><a href="random.html">Random Position</a></li>
+          <li><a href="color.html">Random Color</a></li>
+          <li><a href="calculator.html">Text Length</a></li>
+        </ul>
+      </nav>
+
+    <div class="text-calculator">
+        <h1>Type a word in the box</h1>
+        <input type="text" id=input>
+        <div id="div"></div>
+        <button id="btn" class="btn">Click to calculate word length</button>
+    </div>
+
+    <script>
+        // length calculator
+const input = document.getElementById('input')
+const btn = document.getElementById('btn')
+const div = document.getElementById('div')
+
+btn.addEventListener('click', () => {
+    if(div.classList.contains('active')){
+        div.classList.remove('active')
+        div.innerHTML = "";
+    }else {
+       div.classList.add('active')
+       div.innerHTML = input.value.length;
+    }
+   
+})
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13){
+        e.preventDefault();
+        if(div.classList.contains('active')){
+            div.classList.remove('active')
+            div.innerHTML = "";
+        }else {
+           div.classList.add('active')
+           div.innerHTML = input.value.length;
+        }
+    }
+})
+    </script>
+</body>
+</html>

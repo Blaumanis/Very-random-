@@ -1,0 +1,112 @@
+
+/*global properties*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav{
+  margin: 2rem 0;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+ul li a{
+  color: black;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.btn{
+  cursor: pointer;
+  background-color: lawngreen;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* counter */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  height: 550px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgb(165, 100, 2);
+  border-radius: 5px;
+  margin:5rem auto;
+}
+.container h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.container h2 {
+  color: rgb(18, 233, 29);
+  font-size: 10rem;
+  margin-bottom: 3rem;
+}
+.lower, .add {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: inherit;
+  color: #fff;
+  background: rgb(4, 21, 77);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.lower:focus, .add:focus, .lower:hover, .add:hover {
+  outline: none;
+  background: #fff;
+  color: rgb(4, 21, 77);
+}
+
+
+/* length calculator */
+.text-calculator{
+  margin-top: 5rem;
+  text-align: center;
+}
+.text-calculator input{
+  padding: 20px;
+  font-size: 2rem;
+  font-family: inherit;
+  margin: 2rem 0 1rem 0;
+}
+.text-calculator .active{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(46, 0, 252);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+/* random-color */
+.random-color {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* random-position */
+#image {
+  position: fixed;
+}

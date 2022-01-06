@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Counter</a></li>
+          <li><a href="random.html">Random Position</a></li>
+          <li><a href="color.html">Random Color</a></li>
+          <li><a href="calculator.html">Text Length</a></li>
+        </ul>
+      </nav>
+
+    <div class="container">
+        <h1>COUNTER</h1>
+        <h2 id="count">0</h2>
+        <button class="lower" id="lower">LOWER COUNT</button>
+        <button class="add" id="add">ADD COUNT</button>
+    </div>
+    
+<script>
+    // counter
+const count = document.getElementById('count')
+const lower = document.getElementById('lower')
+const add = document.getElementById('add')
+
+let num = 0;
+
+lower.addEventListener('click', () => {
+    count.innerHTML = `${++num}`
+})
+add.addEventListener('click', () => {
+    count.innerHTML = `${--num}`
+})
+</script>
+</body>
+</html>
